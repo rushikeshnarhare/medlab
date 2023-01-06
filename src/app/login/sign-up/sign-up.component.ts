@@ -15,6 +15,7 @@ export class SignUpComponent implements OnInit {
    otpGenerated!:number;
    signUpForm!:FormGroup;
    otpTimer!:number;
+   isSignUpSuccess:boolean = false ;
 
    sub!:Subscription
   constructor(private fb:FormBuilder,private http:HttpService) { }
@@ -63,11 +64,14 @@ export class SignUpComponent implements OnInit {
     if(this.isVerifyOtp){
       console.log(this.signUpForm.value);
       this.http.postDetailsToServer('users',this.signUpForm.value).subscribe((response:any)=>{
-        if(response && response.length > 0){
-            console.log(response);
-        }
-      })
-    }
-  }
+        if(response){
+          this.isSignUpSuccess = true ;
+         console.log(response);
+     }else {
+       this.isSignUpSuccess = false;
+     }
 
+   })
+ }
+}
 }

@@ -16,6 +16,8 @@ import { ViewProductDetailsComponent } from './components/view-product-details/v
 import { ViewProductDetailsCategoryComponent } from './components/view-product-details-category/view-product-details-category.component';
 import { PageNotFoundComponentComponent } from './components/page-not-found-component/page-not-found-component.component';
 import { LoginModule } from "./login/login.module";
+import { CartComponent } from './cart/cart.component';
+import { CartModule } from './cart/cart.module';
 
 
 
@@ -29,7 +31,8 @@ import { LoginModule } from "./login/login.module";
         TopDealsComponent,
         ViewProductDetailsComponent,
         ViewProductDetailsCategoryComponent,
-        PageNotFoundComponentComponent
+        PageNotFoundComponentComponent,
+        CartComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -41,6 +44,7 @@ import { LoginModule } from "./login/login.module";
         FormsModule,
         HttpClientModule,
         LoginModule,
+        CartModule,
        
     ]
 })
