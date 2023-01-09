@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
 import { SharedService } from '../shared/shared/shared.service';
+import { Order } from './cart.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  
+
+  private orderObj:any;
 
   constructor(private shared:SharedService) { }
 
@@ -21,4 +25,18 @@ export class CartService {
     localStorage.setItem("products",JSON.stringify(products));
     this.shared.emitSelProduct.next(products.length);
   }
+
+
+setOrder(order:any){
+  this.orderObj = order;
+}
+
+getOrder(){
+  return this.orderObj ;
+}
+
+removeProductsFromLocalStorage(){
+  localStorage.removeItem('products');
+}
+
 }

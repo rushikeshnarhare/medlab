@@ -32,10 +32,7 @@ export class HeaderComponent implements OnInit {
 
   this.cardCount = this.shared.cartObs;
 
-
-  }
-
-  
+  }  
   changeAction(action:string){
     this.actionName = action;
   }

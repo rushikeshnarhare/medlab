@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medlab-5000": {
+      "hosting": {
+        "medlab": [
+          "medlab-5000"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medlab-5000"
+  }
+}

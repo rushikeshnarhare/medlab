@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class HttpService {
 
-
-  baseUrl:string="http://localhost:3000/";
+  baseUrl:string="https://plant-wool-rib.glitch.me/";
+ // baseUrl:string="http://localhost:3000/";
 
   httpHeaders:HttpHeaders = new HttpHeaders()
                             .set('content-type','application/json');
