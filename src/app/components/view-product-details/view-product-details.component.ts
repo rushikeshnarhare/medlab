@@ -11,6 +11,7 @@ import { HttpService } from 'src/app/core/http/http.service';
 export class ViewProductDetailsComponent implements OnInit {
 
   productDetails:any;
+  cart: any;
   constructor(private route:ActivatedRoute,private http:HttpService) {
     console.log('Hi')
    }
@@ -35,5 +36,8 @@ export class ViewProductDetailsComponent implements OnInit {
     
 
     } 
+    addToCart(product:any){
+      this.cart.addSelectItemToCart(product);
+     }
 
 }

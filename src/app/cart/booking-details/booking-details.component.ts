@@ -13,6 +13,7 @@ export class BookingDetailsComponent implements OnInit {
 
   bookingForm!:FormGroup;
   finalOrder:any;
+  
   constructor(private fb:FormBuilder,private cart:CartService,private http:HttpService,private router:Router) {
     this.finalOrder = this.cart.getOrder();
    }
@@ -66,5 +67,7 @@ export class BookingDetailsComponent implements OnInit {
    })
 
   }
-
+  bookOrder1(){
+    this.router.navigate(['/confirm-order'])
+  }
 }

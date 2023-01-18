@@ -11,7 +11,7 @@ import { SharedService } from 'src/app/shared/shared/shared.service';
 })
 export class HeaderComponent implements OnInit {
 
-  actionName:string="SignIn";
+ actionName:string="SignIn";
  loggedUserDetails:any;
  isLoginSuccess:boolean = false ;
  cardCount!:Observable<number>
